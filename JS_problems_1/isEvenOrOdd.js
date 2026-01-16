@@ -1,7 +1,10 @@
 function isEvenOrOdd(n) {
-  if (n < 0)
-    throw new RangeError("Numbers should be greater than or equal to zero");
-  if (n % 2 === 0) {
+  if (n === 0) {
+    return `${n} is Even`;
+  }
+  if (n % 1 !== 0) {
+    return `${n} is neither Even nor Odd`;
+  } else if (n % 2 === 0) {
     return `${n} is Even`;
   } else {
     return `${n} is Odd`;
