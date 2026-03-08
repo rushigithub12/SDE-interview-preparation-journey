@@ -6,7 +6,6 @@ function partition(arr, low, high) {
   while (i < j) {
     while (arr[i] <= pivot && i <= high - 1) {
       i++;
-      console.log(i, low, high, j)
     }
     while (arr[j] > pivot && j >= low + 1) {
       j--;
@@ -31,7 +30,7 @@ function quickSort(arr, low, high) {
   return arr
 }
 
-const arr = [4, 6, 2, 5, 7, 9, 1, 3];
+const arr = [4,1, 7, 3];
 const low = 0;
 const high = arr.length - 1;
 
