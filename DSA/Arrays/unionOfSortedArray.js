@@ -43,34 +43,34 @@ function unionOfSortedArrPointer(arr1, m, arr2, n) {
     if (arr1[i] < arr2[j]) {
       if (unionArr.length === 0 || unionArr[unionArr.length - 1] !== arr1[i]) {
         unionArr.push(arr1[i]);
-        i++;
       }
+      i++;
     } else if (arr2[j] < arr1[i]) {
       if (unionArr.length === 0 || unionArr[unionArr.length - 1] !== arr2[j]) {
         unionArr.push(arr2[j]);
-        j++;
       }
+      j++;
     } else {
       if (unionArr.length === 0 || unionArr[unionArr.length - 1] !== arr1[i]) {
         unionArr.push(arr1[i]);
-        i++;
-        j++;
       }
+      i++;
+      j++;
     }
   }
 
   while (i < m) {
     if (unionArr.length === 0 || unionArr[unionArr.length - 1] !== arr1[i]) {
       unionArr.push(arr1[i]);
-      i++;
     }
+    i++;
   }
 
   while (j < n) {
     if (unionArr.length === 0 || unionArr[unionArr.length - 1] !== arr2[j]) {
       unionArr.push(arr2[j]);
-      j++;
     }
+    j++;
   }
 
   return unionArr;
