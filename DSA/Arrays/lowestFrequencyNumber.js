@@ -21,3 +21,15 @@ function lowestFrequencyNumber(arr) {
 const arr = [1, 2, 2, 1, 4];
 
 console.log(lowestFrequencyNumber(arr));
+
+//for finding single element using XOR
+function getSingleElement(arr) {
+  let xorr = 0;
+
+  for (let num of arr) {
+    xorr ^= num;
+  }
+  return xorr;
+}
+
+console.log(getSingleElement(arr));
