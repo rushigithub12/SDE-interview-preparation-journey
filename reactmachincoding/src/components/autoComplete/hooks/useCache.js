@@ -19,8 +19,6 @@ export const useCache = () => {
     return cache.current.clear(key);
   };
 
-  console.log(cache)
-
   return {
     set,
     get,
