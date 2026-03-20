@@ -10,16 +10,20 @@ function floorAndCeilInArray(arr, x) {
     if (arr[mid] >= x) {
       ceil = arr[mid];
       high = mid - 1;
+    } else {
+      low = mid + 1;
     }
     if (arr[mid] <= x) {
       floor = arr[mid];
       low = mid + 1;
+    } else {
+      high = mid - 1;
     }
   }
-  return [floor, ceil];
+  return { floor, ceil };
 }
 
 const arr = [3, 4, 4, 7, 8, 10];
-const x = 8;
+const x = 5;
 
 console.log(floorAndCeilInArray(arr, x));
