@@ -33,6 +33,7 @@ const AutoCompleteWrapper = () => {
       } catch (err) {
         console.log(err);
         setRecipeList([]);
+        setIsLoading(false);
       } finally {
         setIsLoading(false);
       }

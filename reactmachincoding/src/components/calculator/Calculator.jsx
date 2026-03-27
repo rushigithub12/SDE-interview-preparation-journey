@@ -1,49 +1,41 @@
 import React, { useState } from "react";
 import "./Calculator.css";
+import { calculate } from "./calcualtionHelper";
 
-let btns = [1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", 0, "/", "C", "="];
+const btns = [1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", 0, "/", "C", "="];
 const operators = ["+", "-", "*", "/"];
 
 function Calculator() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
+  const isOperator = (val) => operators.includes(val);
+
   const handleButtonClick = (value) => {
-    setInput((prev) => prev + value);
-  };
-
-  const clearInput = () => {
-    setInput("");
-    setResult("");
-  };
-
-  const calculateResult = () => {
-    let num1 = "";
-    let num2 = "";
-    let operator = "";
-
-    for (let i = 0; i < input.length; i++) {
-      const char = input[i];
-      if (operators.includes(char)) {
-        operator = char;
-      } else if (!operator) {
-        num1 += char;
-      } else {
-        num2 += char;
-      }
+    if (value === "C") {
+      setInput("");
+      setResult("");
+      return;
     }
 
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
+    if (value === "=") {
+      try {
+        const res = calculate(input);
+        setResult(res);
+        setInput(res.toString());
+      } catch (e) {
+        setResult(e.toString());
+      }
+      return;
+    }
 
-    let calcResult = 0;
-    if (operator === "+") calcResult = num1 + num2;
-    if (operator === "-") calcResult = num1 - num2;
-    if (operator === "*") calcResult = num1 * num2;
-    if (operator === "/") calcResult = num2 !== 0 ? num1 / num2 : "Error";
-    setResult("");
-
-    setResult(calcResult);
+    setInput((prev) => {
+      if (isOperator(prev.slice(-1)) && isOperator(value)) {
+        //check if the last char is operator and the input entered is operator then delete the last char and replace it with the value new input entered otherwise numbers
+        return prev.slice(0, -1) + value;
+      }
+      return prev + value;
+    });
   };
 
   return (
@@ -54,13 +46,7 @@ function Calculator() {
         {btns.map((btn) => (
           <button
             key={btn}
-            onClick={
-              btn === "C"
-                ? clearInput
-                : btn === "="
-                  ? calculateResult
-                  : () => handleButtonClick(btn.toString())
-            }
+            onClick={() => handleButtonClick(btn.toString())}
             className={`calculator-button ${
               btn === "C" ? "clear" : btn === "=" ? "equal" : ""
             }`}
