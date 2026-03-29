@@ -5,6 +5,7 @@ import AutoCompleteWrapper from "./components/autoComplete/component/AutoComplet
 import Calculator from "./components/calculator/Calculator";
 import { CalculatorEval } from "./components/calculator/CalculatorEval";
 import Carousel from "./components/corousel/Carousel";
+import LocalStorageDemo from "./components/storage/LocalStorageDemo";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <AutoCompleteWrapper /> */}
       {/* <Calculator /> */}
       {/* <CalculatorEval /> */}
-      <Carousel />
+      {/* <Carousel /> */}
+      <LocalStorageDemo />
     </div>
   );
 }
