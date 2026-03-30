@@ -1,28 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useSessionStorage } from "../hooks/useSessionStorage";
 
 const LocalStorageDemo = () => {
-  const [formData, setFormData] = useState(() => {
-    try {
-      const savedData = localStorage.getItem("jobApplication");
-
-      if (!savedData || savedData === "undefined") {
-        return { userName: "", userEmail: "" };
-      }
-
-      return JSON.parse(savedData);
-    } catch (error) {
-      console.error("Invalid JSON in localStorage:", error);
-      return { userName: "", userEmail: "" };
-    }
+  const [formData, setFormData] = useSessionStorage("jobApplication", {
+    userName: "",
+    userEmail: "",
   });
-
-  useEffect(() => {
-    try {
-      localStorage.setItem("jobApplication", JSON.stringify(formData));
-    } catch (e) {
-      console.error(e.toString());
-    }
-  }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
