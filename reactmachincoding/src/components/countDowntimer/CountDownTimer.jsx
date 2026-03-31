@@ -20,7 +20,7 @@ const CountDownTimer = () => {
   }, [isRunning]);
 
   const handleStart = () => {
-    if (time > 0) setIsRunning(true);
+    if (time > 0) setIsRunning(true); //time 10 start
   };
 
   const handlePause = () => {
@@ -36,14 +36,12 @@ const CountDownTimer = () => {
 
   return (
     <div>
-      <header>CountTimer</header>
+      <header>CountDown timer</header>
       <div>
-        <span>{time}secs</span>
-        <div>
-          <button onClick={handleStart}>Start</button>
-          <button onClick={handlePause}>Pause</button>
-          <button onClick={handleReset}>Reset</button>
-        </div>
+        <p>{time} secs</p>
+        <button onClick={handleStart}>start</button>
+        <button onClick={handlePause}> pause</button>
+        <button onClick={handleReset}>reset</button>
       </div>
     </div>
   );
