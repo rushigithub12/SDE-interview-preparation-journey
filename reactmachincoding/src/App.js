@@ -6,6 +6,7 @@ import Calculator from "./components/calculator/Calculator";
 import { CalculatorEval } from "./components/calculator/CalculatorEval";
 import Carousel from "./components/corousel/Carousel";
 import LocalStorageDemo from "./components/storage/LocalStorageDemo";
+import CountDownTimer from "./components/countDowntimer/CountDownTimer";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <Calculator /> */}
       {/* <CalculatorEval /> */}
       {/* <Carousel /> */}
-      <LocalStorageDemo />
+      {/* <LocalStorageDemo /> */}
+      <CountDownTimer />
     </div>
   );
 }
