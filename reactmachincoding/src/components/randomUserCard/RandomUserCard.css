@@ -1,0 +1,23 @@
+.random-user-card {
+  text-align: center;
+}
+
+.random-user-card .user-card{
+  background-color: #fbfbfb;
+  border: 2.9px solid lightblue;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.random-user-card img{
+  border-radius: 50%;
+}
+.random-user-card .right-side{
+  margin-left: 35px;
+}
+.random-user-card .description{
+  padding: 5px;
+  text-align: left;
+}

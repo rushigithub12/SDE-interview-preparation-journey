@@ -1,6 +1,5 @@
 import React from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useSessionStorage } from "../hooks/useSessionStorage";
+import { useSessionStorage } from "../customHooks/useSessionStorage";
 
 // Listen to storage events across tabs
 // window.addEventListener('storage', (event) => {

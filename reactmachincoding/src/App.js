@@ -7,6 +7,7 @@ import { CalculatorEval } from "./components/calculator/CalculatorEval";
 import Carousel from "./components/corousel/Carousel";
 import LocalStorageDemo from "./components/storage/LocalStorageDemo";
 import CountDownTimer from "./components/countDowntimer/CountDownTimer";
+import RandomUserCard from "./components/randomUserCard/RandomUserCard";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <CalculatorEval /> */}
       {/* <Carousel /> */}
       {/* <LocalStorageDemo /> */}
-      <CountDownTimer />
+      {/* <CountDownTimer /> */}
+      <RandomUserCard />
     </div>
   );
 }
