@@ -1,0 +1,37 @@
+
+.dropdown-componentTile {
+    width: 35%;
+    margin: 15px auto; 
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    background-color: #fbfbfb; 
+    overflow: hidden; 
+}
+
+.dropdown-componentHeader {
+    background-color: #fbfbfb;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid lightblue; 
+    text-align: center; 
+}
+
+.dropdown-componentOption {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.dropdown-componentOption span {
+    padding: 8px;
+    border-top: 1px solid whitesmoke; 
+    font-size: 14px;
+    text-align: left; 
+}
+
+.dropdown-componentOption span:hover {
+    background-color: lightgrey; 
+}

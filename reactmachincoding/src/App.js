@@ -9,6 +9,8 @@ import LocalStorageDemo from "./components/storage/LocalStorageDemo";
 import CountDownTimer from "./components/countDowntimer/CountDownTimer";
 import RandomUserCard from "./components/randomUserCard/RandomUserCard";
 import DragNDropComponent from "./components/dragndrop/DragNDropComponent";
+import DropdownWrapper from "./components/dropdown/DropdownWrapper";
+import Dropdown2 from "./components/dropdown/Dropdown2";
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
       {/* <LocalStorageDemo /> */}
       {/* <CountDownTimer /> */}
       {/* <RandomUserCard /> */}
-      <DragNDropComponent />
+      {/* <DragNDropComponent /> */}
+      {/* <DropdownWrapper />
+      <Dropdown2 /> */}
     </div>
   );
 }
