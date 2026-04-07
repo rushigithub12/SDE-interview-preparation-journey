@@ -1,0 +1,9 @@
+.directory-container {
+    border-left: 1px solid black;
+    margin-left: 0.5rem;
+}
+
+.directory-folder-name {
+    margin: 0.5rem;
+    cursor: pointer;
+}
