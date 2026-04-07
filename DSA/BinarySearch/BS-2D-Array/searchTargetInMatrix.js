@@ -51,7 +51,7 @@ function searchTargetInMatrix1(mat, n, m, target) {
 
 console.log(searchTargetInMatrix1(mat, n, m, 8));
 
-//imaginaty flatten array
+//imaginary flatten array
 function searchTargetInMatrix2(mat, n, m, target) {
   let low = 0,
     high = n * m - 1;
