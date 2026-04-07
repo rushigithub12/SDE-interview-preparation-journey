@@ -71,3 +71,15 @@ function searchTargetInColumnSortedMatrix2(mat, n, m, target) {
 }
 
 console.log(searchTargetInColumnSortedMatrix2(mat, n, m, 9));
+
+
+//more optimal
+function searchTargetInColumnSortedMatrix3(matrix, target) {
+  let row;
+  while (matrix.length > 0) {
+    row = matrix.pop();
+    if (row.includes(target)) return true;
+  }
+  return false;
+}
+console.log(searchTargetInColumnSortedMatrix3(mat, 9));
