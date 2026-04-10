@@ -43,7 +43,7 @@ const Directory = () => {
       name,
       type,
       isOpen: type === "directory" ? true : false,
-      children: type === "directory" ? [] : [],
+      children: type === "directory" ? [] : null,
     };
 
     setDirectory((prev) =>

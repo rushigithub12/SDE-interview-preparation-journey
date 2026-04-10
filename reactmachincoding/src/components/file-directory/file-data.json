@@ -1,13 +1,12 @@
 [
-  {
+  {  
     "name": "src",
     "type": "directory",
     "isOpen": true,
     "children": [
       {
         "name": "index.js",
-        "type": "file",
-        "children": []
+        "type": "file"
       },
       {
         "name": "components",
@@ -16,8 +15,7 @@
         "children": [
           {
             "name": "Button.js",
-            "type": "file",
-            "children": []
+            "type": "file"
           }
         ]
       }
@@ -25,7 +23,6 @@
   },
   {
     "name": "package.json",
-    "type": "file",
-    "children": []
+    "type": "file"
   }
 ]
