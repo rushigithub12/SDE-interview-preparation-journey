@@ -12,6 +12,7 @@ import DragNDropComponent from "./components/dragndrop/DragNDropComponent";
 import DropdownWrapper from "./components/dropdown/DropdownWrapper";
 import Dropdown2 from "./components/dropdown/Dropdown2";
 import Directory from "./components/file-directory/Directory";
+import FormValidationWrapper from "./components/formValidation/FormValidationWrapper";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       {/* <DragNDropComponent /> */}
       {/* <DropdownWrapper />
       <Dropdown2 /> */}
-      <Directory />
+      {/* <Directory /> */}
+      <FormValidationWrapper />
     </div>
   );
 }
