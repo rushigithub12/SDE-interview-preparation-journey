@@ -1,0 +1,25 @@
+.gridLightsComponent-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tiles-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    width: 400px;
+}
+
+.grid-tile{
+    border: 1px solid green;
+    border-collapse: collapse;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.grid-tile-filled {
+    background-color: green;
+}
