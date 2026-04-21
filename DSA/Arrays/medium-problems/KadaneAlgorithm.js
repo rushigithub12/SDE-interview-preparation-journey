@@ -37,3 +37,24 @@ function maximumSubArray1(arr) {
 }
 
 console.log(maximumSubArray1(arr));
+
+//optimal approach
+function maximumSubArray2(arr) {
+  let sum = 0;
+  let maxNum = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+    if (sum < 0) {
+      sum = 0;
+    }
+
+    if (sum > maxNum) {
+      maxNum = sum;
+    }
+  }
+  return maxNum;
+}
+
+console.log(maximumSubArray2(arr));
