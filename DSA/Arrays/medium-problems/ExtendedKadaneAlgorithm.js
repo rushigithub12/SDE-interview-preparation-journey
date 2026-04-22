@@ -1,4 +1,7 @@
 const arr = [2, 3, 5, -2, 7, -4];
+const arr1 = [-2, -3, -7, -2, -10, -4];
+const arr2 = [-2,1,-3,4,-1,2,1,-5,4]
+const arr3 = [5,4,-1,7,8]
 
 function ExtendedKadaneAlgorithm(arr) {
   let maxNum = -Infinity;
@@ -29,3 +32,6 @@ function ExtendedKadaneAlgorithm(arr) {
 }
 
 console.log(ExtendedKadaneAlgorithm(arr));
+console.log(ExtendedKadaneAlgorithm(arr1));
+console.log(ExtendedKadaneAlgorithm(arr2));
+console.log(ExtendedKadaneAlgorithm(arr3));
