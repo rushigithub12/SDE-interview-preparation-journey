@@ -15,6 +15,7 @@ import Directory from "./components/file-directory/Directory";
 import FormValidationWrapper from "./components/formValidation/FormValidationWrapper";
 import GridLightsComponent from "./components/grid-lights/GridLightsComponent";
 import JobBoardCard from "./components/jobBoard/JobBoardCard";
+import KanbanBoard from "./components/kanbanBoard/KanbanBoard";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
       {/* <Directory /> */}
       {/* <FormValidationWrapper /> */}
       {/* <GridLightsComponent /> */}
-      <JobBoardCard />
+      {/* <JobBoardCard /> */}
+      <KanbanBoard />
     </div>
   );
 }
