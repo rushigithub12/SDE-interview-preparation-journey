@@ -43,23 +43,42 @@ function lengthOfLongestSubString1(str) {
 console.log(lengthOfLongestSubString1(str));
 console.log(lengthOfLongestSubString1(str1));
 
-//using optimal approach hashArray 
-function lengthOfLongestSubString2(str){
-    let maxLen = 0;
-    let hashSet = new Set();
-    let left = 0;
+//using optimal approach hashArray
+function lengthOfLongestSubString2(str) {
+  let maxLen = 0;
+  let hashSet = new Set();
+  let left = 0;
 
-    for(let right = 0; right < str.length; right++){
-        while(hashSet.has(str[right])){
-            hashSet.delete(str[left]);
-            left++;
-        }
-
-        hashSet.add(str[right]);
-        maxLen = Math.max(maxLen, right - left + 1);
+  for (let right = 0; right < str.length; right++) {
+    while (hashSet.has(str[right])) {
+      hashSet.delete(str[left]);
+      left++;
     }
-    return maxLen;
+    console.log(hashSet);
+    hashSet.add(str[right]);
+    console.log(hashSet);
+    maxLen = Math.max(maxLen, right - left + 1);
+  }
+  return maxLen;
 }
 
-console.log(lengthOfLongestSubString2(str))
-console.log(lengthOfLongestSubString2(str1))
+console.log(lengthOfLongestSubString2(str));
+console.log(lengthOfLongestSubString2(str1));
+
+///using map
+function lengthOfLongestSubString3(str) {
+  let maxLen = 0;
+  let hashMap = new Map();
+  let left = 0;
+
+  for (let right = 0; right < str.length; right++) {
+    if (hashMap.has(str[right])) {
+      left = Math.max(hashMap.get(str[right]) + 1, left);
+    }
+
+    hashMap.set(str[right], right);
+    maxLen = Math.max(maxLen, right - left + 1);
+  }
+
+  return maxLen;
+}
