@@ -11,13 +11,4 @@ obj.greet();
 const grt = obj.greet;
 grt();
 
-//returns undefined 
-
-
-let user = {};
-
-user.me = user;
-
-let clone = structuredClone(user)
-
-console.log(clone)
+//returns undefined
