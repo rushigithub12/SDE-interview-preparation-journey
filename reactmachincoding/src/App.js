@@ -16,6 +16,7 @@ import FormValidationWrapper from "./components/formValidation/FormValidationWra
 import GridLightsComponent from "./components/grid-lights/GridLightsComponent";
 import JobBoardCard from "./components/jobBoard/JobBoardCard";
 import KanbanBoard from "./components/kanbanBoard/KanbanBoard";
+import LikeButton from "./components/like-button/LikeButton";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
       {/* <FormValidationWrapper /> */}
       {/* <GridLightsComponent /> */}
       {/* <JobBoardCard /> */}
-      <KanbanBoard />
+      {/* <KanbanBoard /> */}
+      <LikeButton />
     </div>
   );
 }
