@@ -23,3 +23,34 @@ console.log(fibonacciSeries(-1));
 console.log(fibonacciSeries("abcde"));
 
 console.log("fibSeries==>>", fibSeries);
+
+//using optimization & dynamic programming
+function fib(n, dp = {}) {
+  if (n <= 1) return n;
+
+  if (dp[n] !== undefined) return dp[n];
+
+  dp[n] = fib(n - 2, dp) + fib(n - 1, dp);
+  console.log(dp);
+  return dp[n];
+}
+
+console.log(fib(5));
+//fib[3] already calculated series re-use O(n)
+
+//reduce space complexity
+function fib1(n) {
+  if (n <= 1) return n;
+
+  let a = 0;
+  let b = 1;
+
+  for (let i = 2; i <= n; i++) {
+    let c = a + b;
+    b = a;
+    a = c;
+  }
+  return a;
+}
+
+console.log(fib1(6));
